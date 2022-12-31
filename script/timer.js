@@ -37,11 +37,11 @@ function watch() {
 	/*Exibe a contegem na tela*/
 	if(sec<10 && min<10){
 		document.getElementById('watch').innerText = `0${min}:0${sec}`
-	}else if(sec<10 && min>10){
+	}else if(sec<10 && min>=10){
 		document.getElementById('watch').innerText = `${min}:0${sec}`
-	}else if(sec>10 && min<10){
+	}else if(sec>=10 && min<10){
 		document.getElementById('watch').innerText = `0${min}:${sec}`
-	}else if(sec>10&& min>10){
+	}else if(sec>=10&& min>=10){
 		document.getElementById('watch').innerText = `${min}:${sec}`
 	}
 	
