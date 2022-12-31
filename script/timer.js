@@ -1,13 +1,20 @@
 let sec = 0
 let min = 0
 let interval
+let on
 
 
 /*Função de incio do cronometro*/
 function start() {
 	console.log('Cronometro iniciou!')
-	/*A cada 1 segundo chama a função watch*/
-	interval  = setInterval(watch,1000)
+	on = true
+	if(on){
+		clearInterval(interval)
+		interval  = setInterval(watch,1000)
+	}else {
+		/*A cada 1 segundo chama a função watch*/
+		interval  = setInterval(watch,1000)
+	}		
 }
 
 /*Função de parada do cronometro*/
